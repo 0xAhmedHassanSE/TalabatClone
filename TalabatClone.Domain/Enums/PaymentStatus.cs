@@ -3,6 +3,6 @@ namespace TalabatClone.Domain.Enums
 {
     public enum PaymentStatus
     {
-        Success , Failed , Cancelled 
+        Pending, Success , Failed , Cancelled 
     }
 }

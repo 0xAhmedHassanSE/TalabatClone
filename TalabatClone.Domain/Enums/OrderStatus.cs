@@ -3,6 +3,6 @@ namespace TalabatClone.Domain.Enums
 {
     public enum OrderStatus
     {
-        Pending , Ready , OnDelivery , Cancelled
+        Pending ,Preparing  , Ready , OnDelivery, Delivered, Cancelled
     }
 }

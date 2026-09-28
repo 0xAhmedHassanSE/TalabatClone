@@ -6,6 +6,6 @@ namespace TalabatClone.Domain.Enums
 {
     public enum RestaurantStatus
     {
-        Busy , Empty
+        Busy , Opened , Closed
     }
 }

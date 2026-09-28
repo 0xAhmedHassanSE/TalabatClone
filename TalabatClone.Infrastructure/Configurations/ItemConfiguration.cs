@@ -8,7 +8,10 @@ namespace TalabatClone.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Item> builder)
         {
-            
+            builder.Property(item => item.Name).HasMaxLength(100);
+            builder.Property(item => item.Description).HasMaxLength(400);
+            builder.Property(item => item.Price).HasPrecision(8,2);
+
         }
     }
 }

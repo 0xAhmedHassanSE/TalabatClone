@@ -3,10 +3,10 @@
     public class Category
     {
         public int Id { get; set; }
-        public int Restaurant_Id { get; set; }
-        public string Name { get; set; }
+        public int RestaurantId { get; set; }
+        public string Name { get; set; } = string.Empty!;
         public string? Description { get; set; }
-        public virtual Restaurant Restaurant { get; set; }
-        public virtual ICollection<Item> Items{ get; set; }
+        public virtual Restaurant Restaurant { get; set; } = null!;
+        public virtual ICollection<Item>? Items { get; set; }
     }
 }
