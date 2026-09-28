@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TalabatClone.Domain/TalabatClone.Domain.csproj" />
+  <Project Path="TalabatClone.PL/TalabatClone.PL.csproj" />
+</Solution>
