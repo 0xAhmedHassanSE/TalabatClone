@@ -2,5 +2,5 @@
   <Project Path="TalabatClone.Application/TalabatClone.Application.csproj" />
   <Project Path="TalabatClone.Domain/TalabatClone.Domain.csproj" />
   <Project Path="TalabatClone.Infrastructure/TalabatClone.Infrastructure.csproj" />
-  <Project Path="TalabatClone.PL/TalabatClone.PL.csproj" />
+  <Project Path="TalabatClone.PL/TalabatClone.WebAPI.csproj" />
 </Solution>

@@ -14,9 +14,9 @@
 
   <ItemGroup>
     <Folder Include="Database\" />
-    <Folder Include="Configrations\" />
-    <Folder Include="Implementaions\UnitOfWork\" />
-    <Folder Include="Implementaions\Repos\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Implementations\UnitOfWork\" />
+    <Folder Include="Implementations\Repos\" />
   </ItemGroup>
 
 </Project>
