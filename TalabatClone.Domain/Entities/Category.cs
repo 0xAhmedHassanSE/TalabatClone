@@ -8,5 +8,7 @@
         public string? Description { get; set; }
         public virtual Restaurant Restaurant { get; set; } = null!;
         public virtual ICollection<Item>? Items { get; set; }
+        public bool IsDeleted { get; set; }
+
     }
 }

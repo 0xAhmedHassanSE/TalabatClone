@@ -10,7 +10,9 @@ namespace TalabatClone.Infrastructure.Configurations
         {
             builder.Property(item => item.Name).HasMaxLength(100);
             builder.Property(item => item.Description).HasMaxLength(400);
-            builder.Property(item => item.Price).HasPrecision(8,2);
+            builder.Property(item => item.Price).HasPrecision(8, 2);
+            builder.HasMany(i => i.CartItems).WithOne(ci => ci.Item)
+                .HasForeignKey(ci => ci.ItemId).OnDelete(DeleteBehavior.Restrict);
 
         }
     }

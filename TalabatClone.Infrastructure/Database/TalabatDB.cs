@@ -20,8 +20,14 @@ namespace TalabatClone.Infrastructure.Database
         public virtual DbSet<Restaurant>Restaurants { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderGroup> OrderGroups { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<OrderAddress> OrderAddresses { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<CartItem> CartItems { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
+
 
 
     }

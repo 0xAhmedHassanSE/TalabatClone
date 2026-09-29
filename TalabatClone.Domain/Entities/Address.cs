@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+
+using System.ComponentModel.DataAnnotations;
 
 namespace TalabatClone.Domain.Entities
 {
     public class Address
     {
-        public int Id { get; set; }
+        [MaxLength(100)]
         public string Country { get; set; } = string.Empty;
+        [MaxLength(100)]
         public string City { get; set; } = string.Empty;
+        [MaxLength(100)]
         public string Street { get; set; } = string.Empty;
+        [MaxLength(20)]
         public string ZipCode { get; set; } = string.Empty;
-        public virtual User User { get; set; } = null!;
-        public string UserId { get; set; } = null!;
 
     }
 }
