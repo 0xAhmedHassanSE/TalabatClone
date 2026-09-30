@@ -8,7 +8,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
     {
         builder.Property(o => o.Status).HasConversion<string>().HasMaxLength(100);
         builder.Property(o => o.OrderAmount).HasPrecision(12, 2);
-        builder.HasOne(o => o.OrderGroup).WithMany(o => o.Orders).
+        builder.HasOne(o => o.OrderGroup).WithMany(og => og.Orders).
             HasForeignKey(o => o.OrderGroupId).OnDelete(DeleteBehavior.Restrict);
+        builder.HasQueryFilter(o => !o.IsDeleted);
+
     }
 }

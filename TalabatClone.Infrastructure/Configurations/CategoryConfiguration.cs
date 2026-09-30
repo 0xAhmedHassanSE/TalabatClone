@@ -13,6 +13,8 @@ namespace TalabatClone.Infrastructure.Configurations
         {
             builder.Property(category => category.Name).HasMaxLength(100);
             builder.Property(category => category.Description).HasMaxLength(400);
+            builder.HasQueryFilter(c => !c.IsDeleted);
+
         }
     }
 }

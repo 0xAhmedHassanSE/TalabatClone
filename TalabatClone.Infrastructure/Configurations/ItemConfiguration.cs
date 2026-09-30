@@ -13,6 +13,7 @@ namespace TalabatClone.Infrastructure.Configurations
             builder.Property(item => item.Price).HasPrecision(8, 2);
             builder.HasMany(i => i.CartItems).WithOne(ci => ci.Item)
                 .HasForeignKey(ci => ci.ItemId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasQueryFilter(i => !i.IsDeleted);
 
         }
     }

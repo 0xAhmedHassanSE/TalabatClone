@@ -14,6 +14,7 @@ namespace TalabatClone.Infrastructure.Configurations
             builder.Property(r => r.Status).HasMaxLength(30);
             builder.ComplexProperty(r => r.Address);
             builder.HasOne(R => R.Owner).WithMany(owner => owner.Restaurants).HasForeignKey(r => r.OwnerId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasQueryFilter(r => !r.IsDeleted);
 
         }
     }

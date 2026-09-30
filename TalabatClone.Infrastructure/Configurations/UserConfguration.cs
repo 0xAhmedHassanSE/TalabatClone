@@ -12,6 +12,8 @@ namespace TalabatClone.Infrastructure.Configurations
             builder.Property(user => user.LastName).HasMaxLength(100);
             builder.ComplexProperty(user => user.Address);
             builder.HasMany(c => c.Carts).WithOne(cart => cart.Customer).HasForeignKey(cart => cart.CustomerId);
+            builder.HasQueryFilter(user => !user.IsDeleted);
+
         }
     }
 }
