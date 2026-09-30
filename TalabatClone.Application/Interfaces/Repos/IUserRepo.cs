@@ -8,8 +8,8 @@ namespace TalabatClone.Application.Interfaces.Repos
     {
         Task AddAsync(User user);
         void Update(User user);
-        Task<User> GetByIDAsync(string id);
-        Task<IEnumerable<User>> GetAllAsync(User user);
-        void Delete(string id);
+        Task<User?> GetByIDAsync(string id);
+        Task<IEnumerable<User>> GetAllAsync();
+        void Delete(User user );
     }
 }
