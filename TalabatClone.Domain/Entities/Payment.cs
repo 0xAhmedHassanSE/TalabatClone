@@ -4,7 +4,7 @@ using TalabatClone.Domain.Enums;
 
 namespace TalabatClone.Domain.Entities
 {
-    public class Payment
+    public class Payment:ISoftDeleted
     {
         public int Id { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
