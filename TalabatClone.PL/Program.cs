@@ -1,6 +1,10 @@
 
 using Microsoft.EntityFrameworkCore;
+using TalabatClone.Application.Interfaces.Repos;
+using TalabatClone.Application.Interfaces.UnitOfWork;
 using TalabatClone.Infrastructure.Database;
+using TalabatClone.Infrastructure.Implementations.Repos;
+using TalabatClone.Infrastructure.Implementations.UnitOfWork;
 
 namespace TalabatClone.PL
 {
@@ -14,6 +18,7 @@ namespace TalabatClone.PL
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             var app = builder.Build();
 
