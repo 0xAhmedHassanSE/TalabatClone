@@ -8,12 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TalabatClone.Domain\TalabatClone.Domain.csproj" />
+    <PackageReference Include="AutoMapper" Version="16.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\TalabatClone.Domain\TalabatClone.Domain.csproj" />
   </ItemGroup>
 
 </Project>
