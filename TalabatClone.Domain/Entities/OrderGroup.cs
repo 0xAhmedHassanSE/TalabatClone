@@ -1,7 +1,7 @@
 ﻿
 namespace TalabatClone.Domain.Entities
 {
-    public class OrderGroup:ISoftDeleted
+    public class OrderGroup : ISoftDeleted
     {
         public int Id { get; set; }
         public string CustomerId { get; set; } = null!;

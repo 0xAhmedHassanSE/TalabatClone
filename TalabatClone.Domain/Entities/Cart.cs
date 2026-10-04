@@ -8,7 +8,7 @@ namespace TalabatClone.Domain.Entities
         public virtual User Customer { get; set; } = null!;
         public int RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; } = null!;
-        public virtual ICollection<CartItem> ?CartItems { get; set; } = new List<CartItem>();
+        public virtual ICollection<CartItem>? CartItems { get; set; } = new List<CartItem>();
 
 
     }

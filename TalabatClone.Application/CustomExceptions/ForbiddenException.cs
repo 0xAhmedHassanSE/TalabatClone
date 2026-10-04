@@ -2,11 +2,11 @@
 
 namespace TalabatClone.Application.CustomExceptions
 {
-     class ForbiddenException:Exception
+    class ForbiddenException : Exception
     {
-        public ForbiddenException(string message):base(message)
+        public ForbiddenException(string message) : base(message)
         {
-            
+
         }
     }
 }

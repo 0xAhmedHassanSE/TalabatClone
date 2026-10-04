@@ -3,7 +3,7 @@
 
 namespace TalabatClone.Domain.Entities
 {
-    public class User:IdentityUser,ISoftDeleted
+    public class User : IdentityUser, ISoftDeleted
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;

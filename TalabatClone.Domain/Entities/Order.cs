@@ -3,7 +3,7 @@ using TalabatClone.Domain.Enums;
 
 namespace TalabatClone.Domain.Entities
 {
-    public class Order:ISoftDeleted
+    public class Order : ISoftDeleted
     {
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;

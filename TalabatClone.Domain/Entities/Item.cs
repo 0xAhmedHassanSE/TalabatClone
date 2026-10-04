@@ -1,7 +1,7 @@
 ﻿
 namespace TalabatClone.Domain.Entities
 {
-    public class Item:ISoftDeleted
+    public class Item : ISoftDeleted
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;

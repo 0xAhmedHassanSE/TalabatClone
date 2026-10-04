@@ -8,7 +8,7 @@ public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
     {
         builder.HasOne(pay => pay.OrderGroup).WithOne(og => og.Payment).HasForeignKey<Payment>(pay => pay.OrderGroupId).OnDelete(DeleteBehavior.Restrict);
         builder.Property(pay => pay.Amount).HasPrecision(12, 2);
-        builder.Property(pay => pay.PaymentStatus).HasConversion<string>().HasMaxLength(100); 
+        builder.Property(pay => pay.PaymentStatus).HasConversion<string>().HasMaxLength(100);
         builder.Property(pay => pay.PaymentMethod).HasConversion<string>().HasMaxLength(100);
         builder.HasQueryFilter(p => !p.IsDeleted);
 

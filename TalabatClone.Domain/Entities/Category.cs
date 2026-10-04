@@ -1,6 +1,6 @@
 ﻿namespace TalabatClone.Domain.Entities
 {
-    public class Category:ISoftDeleted
+    public class Category : ISoftDeleted
     {
         public int Id { get; set; }
         public int RestaurantId { get; set; }

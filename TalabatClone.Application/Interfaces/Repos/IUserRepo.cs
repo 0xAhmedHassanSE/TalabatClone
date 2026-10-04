@@ -10,6 +10,6 @@ namespace TalabatClone.Application.Interfaces.Repos
         void Update(User user);
         Task<User?> GetByIDAsync(string id);
         Task<IEnumerable<User>> GetAllAsync();
-        void Delete(User user );
+        void Delete(User user);
     }
 }

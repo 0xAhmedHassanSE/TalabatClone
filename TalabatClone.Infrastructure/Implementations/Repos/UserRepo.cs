@@ -17,13 +17,13 @@ namespace TalabatClone.Infrastructure.Implementations.Repos
         public void Delete(User user) => user.IsDeleted = true;
 
 
-        public async Task<IEnumerable<User>> GetAllAsync() =>await talabatDB.Users.AsNoTracking().ToListAsync();
+        public async Task<IEnumerable<User>> GetAllAsync() => await talabatDB.Users.AsNoTracking().ToListAsync();
 
 
         public async Task<User?> GetByIDAsync(string id) => await talabatDB.Users.FindAsync(id);
 
 
         public void Update(User user) => talabatDB.Users.Update(user);
-       
+
     }
 }

@@ -7,7 +7,7 @@ using TalabatClone.Domain.Entities;
 
 namespace TalabatClone.Application.MappingProfiles
 {
-    public class RestaurantProfile:Profile
+    public class RestaurantProfile : Profile
     {
         public RestaurantProfile()
         {

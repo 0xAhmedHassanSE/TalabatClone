@@ -5,7 +5,7 @@ using TalabatClone.Domain.Entities;
 
 namespace TalabatClone.Application.Interfaces.UnitOfWork
 {
-    public interface IUnitOfWork:IAsyncDisposable
+    public interface IUnitOfWork : IAsyncDisposable
     {
         Task<int> SaveAllAsync();
         IUserRepo Users { get; }
