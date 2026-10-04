@@ -8,10 +8,10 @@ namespace TalabatClone.Application.Services.InterFaces
 {
     public interface IRestaurantServices
     {
-        Task<Response<RestaurantResponseDto>> CreateRestaurantAsync(CreateRestaurantDto restaurantDto , string OwnerId);
-        Task<Response<RestaurantResponseDto>> GetRestaurantByIDAsync(int RestaurantId);
-        Task<Response<List<RestaurantResponseDto>>> GetRestaurantsAsync();
-        Task<Response<List<RestaurantResponseDto>>> GetRestaurantsByOwnerAsync(string OwnerId);
+        Task<RestaurantResponseDto> CreateRestaurantAsync(CreateRestaurantDto restaurantDto , string OwnerId);
+        Task<RestaurantResponseDto> GetRestaurantByIDAsync(int RestaurantId);
+        Task<List<RestaurantResponseDto>> GetRestaurantsAsync();
+        Task<List<RestaurantResponseDto>> GetRestaurantsByOwnerAsync(string OwnerId);
         Task UpdateRestaurant(int RestaurantId, UpdateRestaurantDto restaurantDto , string RequestingUserId);
         Task UpdateRestaurantStatus(int RestaurantId, RestaurantStatus status, string RequestingUserId);
         Task DeleteRestaurantById(int RestaurantId,string RequestingUserId);

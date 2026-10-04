@@ -1,4 +1,6 @@
 ﻿
+using System.Linq.Expressions;
+
 namespace TalabatClone.Application.Interfaces.Repos
 {
     public interface IGenericRepo<T> where T : class
@@ -8,5 +10,6 @@ namespace TalabatClone.Application.Interfaces.Repos
         Task<T?> GetByIDAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
         void Delete(T item);
+        Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> expression);
     }
 }
