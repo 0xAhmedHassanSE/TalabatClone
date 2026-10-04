@@ -11,7 +11,7 @@ namespace TalabatClone.Infrastructure.InfrastructureServices
 {
     public static class InfraServices
     {
-        public static IServiceCollection AddInfrastructure(IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TalabatDB>
                 (option => option.UseSqlServer(configuration.GetConnectionString("Default")));

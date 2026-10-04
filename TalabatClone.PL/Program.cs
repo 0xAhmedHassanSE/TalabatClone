@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Diagnostics;
 using TalabatClone.Application.ApplicationServices;
+using TalabatClone.Infrastructure.InfrastructureServices;
 
 namespace TalabatClone.PL
 {
@@ -14,6 +16,7 @@ namespace TalabatClone.PL
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             if (app.Environment.IsDevelopment())
             {
@@ -22,7 +25,7 @@ namespace TalabatClone.PL
             }
 
             app.UseHttpsRedirection();
-
+            
             app.UseAuthorization();
 
 

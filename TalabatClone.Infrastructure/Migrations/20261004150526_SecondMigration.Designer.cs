@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TalabatClone.Infrastructure.Database;
 
@@ -12,9 +13,11 @@ using TalabatClone.Infrastructure.Database;
 namespace TalabatClone.Infrastructure.Migrations
 {
     [DbContext(typeof(TalabatDB))]
-    partial class TalabatDBModelSnapshot : ModelSnapshot
+    [Migration("20261004150526_SecondMigration")]
+    partial class SecondMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
